@@ -10,7 +10,7 @@ if(isset($_POST['login']))
     $query=mysqli_query($con,"SELECT ID from admin where  username='$adminuser' && password='$password' ");
     $ret=mysqli_fetch_array($query);
     if($ret>0){
-      $_SESSION['vpmsaid']=$ret['ID'];
+      //$_SESSION['vpmsaid']=$ret['ID'];
      header('location:dashboard.php');
     }
     else{

@@ -1,9 +1,37 @@
+<<<<<<< HEAD
+=======
+<?php
+session_start();
+error_reporting(0);
+include('dba/dbconn.php');
+
+if(isset($_POST['login']))
+  {
+    $adminuser=$_POST['username'];
+    $password=md5($_POST['password']);
+    $query=mysqli_query($con,"SELECT ID from admin where  username='$adminuser' && password='$password' ");
+    $ret=mysqli_fetch_array($query);
+    if($ret>0){
+      //$_SESSION['vpmsaid']=$ret['ID'];
+     header('location:dashboard.php');
+    }
+    else{
+    $msg="Error de autenticación";
+    }
+  }
+?>
+
+>>>>>>> 86d323da136ee2bec708e9049345e2bd7f5ef89e
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
 	<title>Estacionamiento Unifranz</title>
+=======
+	<title>Estacionamiento Unifranz :)</title>
+>>>>>>> 86d323da136ee2bec708e9049345e2bd7f5ef89e
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">

@@ -18,6 +18,7 @@ if (strlen($_SESSION['vpmsaid']==0)) {
 	<link href="css/datepicker3.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 	
+<<<<<<< HEAD
 	<!--Custom Font-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 </head>
@@ -192,6 +193,13 @@ if (strlen($_SESSION['vpmsaid']==0)) {
 
 	</script>
 
+=======
+	
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+</head>
+<body>
+       
+>>>>>>> 86d323da136ee2bec708e9049345e2bd7f5ef89e
 		
 </body>
 </html>

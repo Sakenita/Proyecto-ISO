@@ -10,10 +10,10 @@ if(isset($_POST['login']))
     $query=mysqli_query($con,"SELECT ID from admin where  username='$username' && password='$password' ");
     $ret=mysqli_fetch_array($query);
     if($ret>0){
-     header('location:dashboard.php');
+      header('location:dashboard.php');
     }
     else{
-    $msg="Error de autenticación";
+      $msg="Error de autenticación";
     }
   }
 ?>

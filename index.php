@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-=======
-<?php
-session_start();
-error_reporting(0);
-include('dba/dbconn.php');
 
-if(isset($_POST['login']))
-  {
-    $adminuser=$_POST['username'];
-    $password=md5($_POST['password']);
-    $query=mysqli_query($con,"SELECT ID from admin where  username='$username' && password='$password' ");
-    $ret=mysqli_fetch_array($query);
-    if($ret>0){
-      //$_SESSION['vpmsaid']=$ret['ID'];
-     header('location:dashboard.php');
-    }
-    else{
-    $msg="Error de autenticación";
-    }
-  }
-?>
-
->>>>>>> 86d323da136ee2bec708e9049345e2bd7f5ef89e
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,14 +17,8 @@ if(isset($_POST['login']))
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Ingrese sus credenciales</div>
 				<div class="panel-body">
-					<form method="POST">
-					<?php if($msg)
-						echo "<div class='alert bg-danger' role='alert'>
-						<em class='fa fa-lg fa-warning'>&nbsp;</em> 
-						$msg
-						<a href='#' class='pull-right'>
-						<em class='fa fa-lg fa-close'>
-						</em></a></div>" ?> 
+					<form method="POST" action=validar.php>
+					
 
 						<fieldset>
 							<div class="form-group">

@@ -27,19 +27,8 @@ if(isset($_POST['login']))
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 	<title>Estacionamiento Unifranz</title>
-=======
-	<title>Estacionamiento Unifranz :)</title>
->>>>>>> 86d323da136ee2bec708e9049345e2bd7f5ef89e
-=======
-	<title>Estacionamiento universidad Unifranz :)</title>
->>>>>>> 2369084941d772a12001c9213e65929b3f85bde8
-=======
-	<title>Estacionamiento Universidad Unifranz :)</title>
->>>>>>> d95bf1508480a70621952c8de05501abc713efbe
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">

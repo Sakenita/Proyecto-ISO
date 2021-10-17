@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include('includes/dbconn.php');
+include('dba/dbconn.php');
 
 if(isset($_POST['login']))
   {
@@ -14,7 +14,7 @@ if(isset($_POST['login']))
      header('location:dashboard.php');
     }
     else{
-    $msg="Login Failed !!";
+    $msg="Error de autenticación";
     }
   }
 ?>
@@ -28,10 +28,6 @@ if(isset($_POST['login']))
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
 </head>
 <body>
 	<div class="row">
@@ -48,7 +44,6 @@ if(isset($_POST['login']))
 						<a href='#' class='pull-right'>
 						<em class='fa fa-lg fa-close'>
 						</em></a></div>" ?> 
-                        
 
 						<fieldset>
 							<div class="form-group">
@@ -58,7 +53,6 @@ if(isset($_POST['login']))
 								<input class="form-control" placeholder="Contraseña" name="password" type="password" value="">
 							</div>
 							<div class="checkbox">
-								
 								<a href="forgot-password.php" style="text-decoration:none;">Olvidaste tu contraseña?</a>
 							</div>
 							<button class="btn btn-success" type="submit" name="login">Ingresar</button></fieldset>

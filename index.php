@@ -9,7 +9,7 @@ if(isset($_POST['login']))
   {
     $adminuser=$_POST['username'];
     $password=md5($_POST['password']);
-    $query=mysqli_query($con,"SELECT ID from admin where  username='$adminuser' && password='$password' ");
+    $query=mysqli_query($con,"SELECT ID from admin where  username='$username' && password='$password' ");
     $ret=mysqli_fetch_array($query);
     if($ret>0){
       //$_SESSION['vpmsaid']=$ret['ID'];
@@ -29,6 +29,7 @@ if(isset($_POST['login']))
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<title>Estacionamiento Unifranz</title>
 =======
 	<title>Estacionamiento Unifranz :)</title>
@@ -36,6 +37,9 @@ if(isset($_POST['login']))
 =======
 	<title>Estacionamiento universidad Unifranz :)</title>
 >>>>>>> 2369084941d772a12001c9213e65929b3f85bde8
+=======
+	<title>Estacionamiento Universidad Unifranz :)</title>
+>>>>>>> d95bf1508480a70621952c8de05501abc713efbe
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">

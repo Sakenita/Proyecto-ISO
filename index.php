@@ -1,30 +1,10 @@
-<?php
-session_start();
-error_reporting(0);
-include('dba/dbconn.php');
-
-if(isset($_POST['login']))
-  {
-    $adminuser=$_POST['username'];
-    $password=md5($_POST['password']);
-    $query=mysqli_query($con,"SELECT ID from admin where  username='$adminuser' && password='$password' ");
-    $ret=mysqli_fetch_array($query);
-    if($ret>0){
-      //$_SESSION['vpmsaid']=$ret['ID'];
-     header('location:dashboard.php');
-    }
-    else{
-    $msg="Error de autenticación";
-    }
-  }
-?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Estacionamiento universidad Unifranz :)</title>
+	<title>Estacionamiento Universidad Unifranz :)</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
@@ -36,7 +16,7 @@ if(isset($_POST['login']))
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Ingrese sus credenciales</div>
 				<div class="panel-body">
-					<form method="POST">
+					<form action="validar.php" method="POST">
 					<?php if($msg)
 						echo "<div class='alert bg-danger' role='alert'>
 						<em class='fa fa-lg fa-warning'>&nbsp;</em> 
